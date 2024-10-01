@@ -1,4 +1,4 @@
-package livedb
+package LiveDb
 
 import (
 	"fmt"
@@ -32,8 +32,8 @@ func NewLiveDB() (*LiveDb, error) {
 	}, nil
 }
 
-// creating collections
-func (ldb LiveDb) createCollection (name string) (*collection, error) {
+// creating collecions
+func (ldb LiveDb) CreateCollection (name string) (*collection, error) {
 	collection := collection{} // collection to store the user created bucket
 	// create a read-write bucket with user sent name
 	err := ldb.DB.Update(func (tx *bbolt.Tx) error {

@@ -1,9 +1,10 @@
 package main
 
 import (
+	"fmt"
 	"log"
 
-	"./LiveDb"
+	"github.com/Ni-011/LiveDb/LiveDb"
 )
 
 func main() {
@@ -13,13 +14,17 @@ func main() {
 		"age":  "19",
 	}
 
+	_ = User
+
 	DB, err := LiveDb.NewLiveDB()
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	collection, err := DB.createCollection("users")
+	collection, err := DB.CreateCollection("users")
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	fmt.Println(collection)
 }

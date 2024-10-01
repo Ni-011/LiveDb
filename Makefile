@@ -1,9 +1,9 @@
 build: 
-	go build -o bin/LiveDb cmd/main.go
+	@go build -o bin/LiveDb cmd/main.go
 
 run:
-	./bin/LiveDb
+	@./bin/LiveDb
 
 test: 
-	go test -v ./...
+	@go test -v ./...
 	
